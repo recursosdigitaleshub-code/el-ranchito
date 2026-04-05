@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60" fill="none">
+  <!-- Horseshoe icon -->
+  <path d="M10 40C10 24 18 12 28 12S46 24 46 40" stroke="#C8A96E" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="10" cy="42" r="3" fill="#C8A96E"/>
+  <circle cx="46" cy="42" r="3" fill="#C8A96E"/>
+  <!-- Star -->
+  <polygon points="28,6 30,10 34,10 31,13 32,17 28,15 24,17 25,13 22,10 26,10" fill="#BF5B21"/>
+  <!-- Text -->
+  <text x="56" y="30" font-family="Playfair Display, Georgia, serif" font-weight="800" font-size="26" fill="#3E2723">El </text>
+  <text x="86" y="30" font-family="Playfair Display, Georgia, serif" font-weight="800" font-size="26" fill="#BF5B21">Ranchito</text>
+  <text x="56" y="48" font-family="Nunito, sans-serif" font-weight="400" font-size="10" fill="#7A7067" letter-spacing="3">RESTAURANTE</text>
+</svg>

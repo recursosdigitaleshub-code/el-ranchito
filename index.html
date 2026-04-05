@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Ranchito | Restaurante con Sabor Autentico — Reservas y Eventos</title>
+  <meta name="description" content="El Ranchito: cocina tradicional mexicana, parrilla a las brasas y el mejor ambiente para compartir en familia. Reservas y eventos especiales.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="El Ranchito | Restaurante con Sabor Autentico">
+  <meta property="og:description" content="Cocina tradicional mexicana, parrilla a las brasas y el mejor ambiente para compartir en familia. Reservas y eventos especiales.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elranchito.com">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="El Ranchito">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Nunito:wght@400;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "El Ranchito",
+    "servesCuisine": ["Mexican", "Grill"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Ejemplo 123",
+      "addressLocality": "Ciudad de Mexico",
+      "addressRegion": "CDMX",
+      "postalCode": "06600",
+      "addressCountry": "MX"
+    },
+    "telephone": "+52-55-5123-4567",
+    "url": "https://elranchito.com",
+    "openingHours": "Tu-Su 13:00-23:00",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="navbar" class="navbar">
+    <div class="navbar__container">
+      <a href="#inicio" class="navbar__brand">
+        <img src="assets/logo.svg" alt="El Ranchito" class="navbar__logo">
+      </a>
+
+      <nav id="navMenu" class="navbar__nav">
+        <a href="#inicio" class="navbar__link">Inicio</a>
+        <a href="#menu" class="navbar__link">Menu</a>
+        <a href="#reservas" class="navbar__link">Reservas</a>
+        <a href="#eventos" class="navbar__link">Eventos</a>
+        <a href="#nosotros" class="navbar__link">Nosotros</a>
+      </nav>
+
+      <a href="#reservas" class="navbar__cta btn btn--primary">Reservar Mesa</a>
+
+      <button id="navToggle" class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="inicio" class="hero">
+    <div class="hero__content">
+      <h1>El Ranchito</h1>
+      <p class="hero__tagline">Sabor autentico con alma de rancho</p>
+      <p class="hero__subtitle">Cocina tradicional, parrilla a las brasas y el mejor ambiente para compartir en familia</p>
+      <div class="hero__ctas">
+        <a href="#menu" class="btn btn--primary">Ver Menu</a>
+        <a href="#reservas" class="btn btn--secondary">Reservar Mesa</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==================== MENU ==================== -->
+  <section id="menu" class="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nuestro Menu</h2>
+        <p class="section-subtitle">De la parrilla a tu mesa</p>
+      </div>
+
+      <div class="menu__tabs">
+        <button class="menu__tab menu__tab--active" data-category="entradas">Entradas</button>
+        <button class="menu__tab" data-category="parrilla">Parrilla</button>
+        <button class="menu__tab" data-category="platos">Platos Fuertes</button>
+        <button class="menu__tab" data-category="postres">Postres</button>
+        <button class="menu__tab" data-category="bebidas">Bebidas</button>
+      </div>
+
+      <div class="menu__content">
+
+        <!-- Entradas -->
+        <div class="menu__category" data-category="entradas">
+          <div class="menu__item">
+            <h4 class="menu__item-name">Guacamole Fresco</h4>
+            <p class="menu__item-desc">Aguacate, tomate, cebolla, cilantro y limon</p>
+            <span class="menu__item-price">$120</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Quesadillas de Huitlacoche</h4>
+            <p class="menu__item-desc">Tortilla de maiz con huitlacoche y queso Oaxaca</p>
+            <span class="menu__item-price">$150</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Sopa de Tortilla</h4>
+            <p class="menu__item-desc">Caldo de jitomate con tiras de tortilla, aguacate y crema</p>
+            <span class="menu__item-price">$110</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Empanadas Criollas</h4>
+            <p class="menu__item-desc">Rellenas de carne, aceitunas y huevo</p>
+            <span class="menu__item-price">$140</span>
+          </div>
+        </div>
+
+        <!-- Parrilla -->
+        <div class="menu__category" data-category="parrilla" hidden>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Arrachera al Carbon</h4>
+            <p class="menu__item-desc">300g de arrachera marinada, guacamole y tortillas</p>
+            <span class="menu__item-price">$320</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Costillas BBQ</h4>
+            <p class="menu__item-desc">Costillas banadas en salsa BBQ casera, coleslaw</p>
+            <span class="menu__item-price">$350</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Pollo al Pastor</h4>
+            <p class="menu__item-desc">Pechuga marinada al pastor, pina asada</p>
+            <span class="menu__item-price">$250</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Corte Ranchero</h4>
+            <p class="menu__item-desc">400g de corte premium con chimichurri</p>
+            <span class="menu__item-price">$420</span>
+          </div>
+        </div>
+
+        <!-- Platos Fuertes -->
+        <div class="menu__category" data-category="platos" hidden>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Enchiladas Suizas</h4>
+            <p class="menu__item-desc">Tortillas rellenas de pollo banadas en salsa verde</p>
+            <span class="menu__item-price">$180</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Mole Poblano</h4>
+            <p class="menu__item-desc">Pollo en mole tradicional con arroz y frijoles</p>
+            <span class="menu__item-price">$220</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Tacos de Birria</h4>
+            <p class="menu__item-desc">4 tacos con consome para dippear</p>
+            <span class="menu__item-price">$200</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Chile Relleno</h4>
+            <p class="menu__item-desc">Chile poblano relleno de picadillo con nogada</p>
+            <span class="menu__item-price">$190</span>
+          </div>
+        </div>
+
+        <!-- Postres -->
+        <div class="menu__category" data-category="postres" hidden>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Churros con Cajeta</h4>
+            <p class="menu__item-desc">Churros caseros con salsa de cajeta</p>
+            <span class="menu__item-price">$90</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Flan Napolitano</h4>
+            <p class="menu__item-desc">Flan cremoso con caramelo</p>
+            <span class="menu__item-price">$85</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Pastel Tres Leches</h4>
+            <p class="menu__item-desc">Bizcocho empapado en tres leches</p>
+            <span class="menu__item-price">$100</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Helado de Vainilla con Mezcal</h4>
+            <p class="menu__item-desc">Artesanal con toque de mezcal</p>
+            <span class="menu__item-price">$95</span>
+          </div>
+        </div>
+
+        <!-- Bebidas -->
+        <div class="menu__category" data-category="bebidas" hidden>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Agua de Horchata</h4>
+            <p class="menu__item-desc">Fresca y cremosa</p>
+            <span class="menu__item-price">$50</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Margarita Clasica</h4>
+            <p class="menu__item-desc">Tequila, limon, triple sec</p>
+            <span class="menu__item-price">$130</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Michelada Ranchera</h4>
+            <p class="menu__item-desc">Cerveza con salsa y limon</p>
+            <span class="menu__item-price">$90</span>
+          </div>
+          <div class="menu__item">
+            <h4 class="menu__item-name">Cafe de Olla</h4>
+            <p class="menu__item-desc">Cafe con canela y piloncillo</p>
+            <span class="menu__item-price">$60</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu__cta">
+        <a href="#reservas" class="btn btn--primary">Reservar para Probar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESERVAS ==================== -->
+  <section id="reservas" class="reservations">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Reserva tu Mesa</h2>
+        <p class="section-subtitle">Asegura tu lugar en El Ranchito</p>
+      </div>
+
+      <form id="reservationForm" class="reservation__form" novalidate>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="resName" class="form__label">Nombre</label>
+            <input type="text" id="resName" name="nombre" class="form__input" required placeholder="Tu nombre completo">
+          </div>
+          <div class="form__group">
+            <label for="resPhone" class="form__label">Telefono</label>
+            <input type="tel" id="resPhone" name="telefono" class="form__input" required placeholder="55 1234 5678">
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label for="resEmail" class="form__label">Email</label>
+            <input type="email" id="resEmail" name="email" class="form__input" placeholder="correo@ejemplo.com">
+          </div>
+          <div class="form__group">
+            <label for="resGuests" class="form__label">Comensales</label>
+            <input type="number" id="resGuests" name="comensales" class="form__input" min="1" max="20" required placeholder="2">
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label for="resDate" class="form__label">Fecha</label>
+            <input type="date" id="resDate" name="fecha" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label for="resTime" class="form__label">Hora</label>
+            <select id="resTime" name="hora" class="form__input" required>
+              <option value="" disabled selected>Selecciona una hora</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+              <option value="21:00">21:00</option>
+              <option value="22:00">22:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__group form__group--full">
+          <label for="resNotes" class="form__label">Notas especiales</label>
+          <textarea id="resNotes" name="notas" class="form__input form__textarea" rows="3" placeholder="Alergias, celebraciones, preferencias de mesa..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary form__submit">Confirmar Reserva</button>
+        <div id="reservationStatus" class="reservation__status"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== EVENTOS ==================== -->
+  <section id="eventos" class="events">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Eventos Especiales</h2>
+        <p class="section-subtitle">Celebra tus momentos en El Ranchito</p>
+      </div>
+
+      <div class="events__content">
+        <div class="events__form">
+          <div class="form__group">
+            <label for="eventType" class="form__label">Tipo de evento</label>
+            <select id="eventType" name="tipoEvento" class="form__input" required>
+              <option value="" disabled selected>Selecciona el tipo de evento</option>
+              <option value="cumpleanos">Cumpleanos</option>
+              <option value="boda">Boda</option>
+              <option value="corporativo">Corporativo</option>
+              <option value="graduacion">Graduacion</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="eventGuests" class="form__label">Numero de invitados</label>
+            <input type="number" id="eventGuests" name="invitados" class="form__input" min="10" max="200" required placeholder="50">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label">Servicios adicionales</label>
+            <div class="events__services">
+              <label class="events__service-label">
+                <input type="checkbox" id="svcBasic" name="servicios" value="basico" data-price-per-person="350">
+                <span>Menu Basico</span>
+                <span class="events__price">$350/persona</span>
+              </label>
+              <label class="events__service-label">
+                <input type="checkbox" id="svcPremium" name="servicios" value="premium" data-price-per-person="550">
+                <span>Menu Premium</span>
+                <span class="events__price">$550/persona</span>
+              </label>
+              <label class="events__service-label">
+                <input type="checkbox" id="svcBar" name="servicios" value="barra" data-price-per-person="200">
+                <span>Barra Libre</span>
+                <span class="events__price">$200/persona</span>
+              </label>
+              <label class="events__service-label">
+                <input type="checkbox" id="svcDecor" name="servicios" value="decoracion" data-price-fixed="5000">
+                <span>Decoracion</span>
+                <span class="events__price">$5,000</span>
+              </label>
+              <label class="events__service-label">
+                <input type="checkbox" id="svcMusic" name="servicios" value="musica" data-price-fixed="8000">
+                <span>Musica en Vivo</span>
+                <span class="events__price">$8,000</span>
+              </label>
+              <label class="events__service-label">
+                <input type="checkbox" id="svcWaiters" name="servicios" value="meseros" data-price-fixed="1500">
+                <span>Meseros Extra</span>
+                <span class="events__price">$1,500</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="events__quote">
+          <h3>Cotizacion Estimada</h3>
+          <div id="quoteBreakdown" class="events__breakdown"></div>
+          <hr>
+          <div class="events__total">
+            <span>Total Estimado:</span>
+            <span id="quoteTotal">$0</span>
+          </div>
+          <p class="events__disclaimer">*Precio estimado. Solicite cotizacion formal para precio definitivo.</p>
+          <a href="https://wa.me/5215551234567?text=Hola%2C%20quiero%20cotizar%20un%20evento" class="btn btn--primary" id="contacto-evento">Solicitar Cotizacion Formal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NOSOTROS ==================== -->
+  <section id="nosotros" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Sobre Nosotros</h2>
+      </div>
+
+      <div class="about__content">
+        <div class="about__text">
+          <p>El Ranchito nacio como un sueno familiar: llevar los sabores autenticos del campo mexicano a la ciudad. Con mas de una decada de tradicion, nuestra cocina honra las recetas heredadas de generacion en generacion, preparadas con ingredientes frescos y el carino de siempre.</p>
+          <p>Nuestro espacio combina la calidez de un rancho con un ambiente rustico y acogedor, perfecto para reuniones familiares, cenas entre amigos o celebraciones especiales. Cada plato que sale de nuestra cocina lleva el sello de lo autentico, porque en El Ranchito la comida se hace con el alma.</p>
+        </div>
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-number">12+</span>
+            <span class="about__stat-label">Anos</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number">50,000+</span>
+            <span class="about__stat-label">Platos Servidos</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-number">500+</span>
+            <span class="about__stat-label">Eventos Realizados</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__cta">
+        <a href="#eventos" class="btn btn--primary">Organiza tu Evento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <img src="assets/logo.svg" alt="El Ranchito" class="footer__logo">
+          <p class="footer__desc">Cocina tradicional mexicana y parrilla a las brasas. El sabor autentico que tu familia merece.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Links Rapidos</h4>
+          <nav class="footer__nav">
+            <a href="#inicio" class="footer__link">Inicio</a>
+            <a href="#menu" class="footer__link">Menu</a>
+            <a href="#reservas" class="footer__link">Reservas</a>
+            <a href="#eventos" class="footer__link">Eventos</a>
+            <a href="#nosotros" class="footer__link">Nosotros</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Contacto</h4>
+          <address class="footer__contact">
+            <p>Calle Ejemplo 123, Col. Centro, CDMX</p>
+            <p>Tel: <a href="tel:+525551234567">55 5123 4567</a></p>
+            <p>Email: <a href="mailto:hola@elranchito.com">hola@elranchito.com</a></p>
+            <p>Horario: Mar - Dom, 13:00 - 23:00</p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Redes Sociales</h4>
+          <div class="footer__social">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer__social-link">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer__social-link">Instagram</a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer__social-link">TikTok</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 El Ranchito. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== WHATSAPP FLOAT ==================== -->
+  <a href="https://wa.me/5215551234567?text=Hola%2C%20quiero%20hacer%20una%20reserva" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
