@@ -75,20 +75,25 @@
 
   <!-- ==================== HERO ==================== -->
   <section id="inicio" class="hero">
+    <img src="assets/images/hero-feast.png" alt="" class="hero__bg" aria-hidden="true">
+    <div class="hero__overlay"></div>
     <div class="hero__content">
-      <h1>El Ranchito</h1>
-      <p class="hero__tagline">Sabor autentico con alma de rancho</p>
-      <p class="hero__subtitle">Cocina tradicional, parrilla a las brasas y el mejor ambiente para compartir en familia</p>
+      <h1>Sabor autentico de rancho en cada plato</h1>
+      <p class="hero__tagline">Vive una experiencia unica con comida tradicional, ambiente calido y atencion de primera</p>
       <div class="hero__ctas">
-        <a href="#menu" class="btn btn--primary">Ver Menu</a>
-        <a href="#reservas" class="btn btn--secondary">Reservar Mesa</a>
-        <a href="#eventos" class="btn btn--secondary">Eventos Especiales</a>
+        <a href="#reservas" class="btn btn--primary">Reservar Mesa</a>
+        <a href="#menu" class="btn btn--secondary">Ver Menu</a>
+      </div>
+      <div class="hero__trust">
+        <span>&#9733;&#9733;&#9733;&#9733;&#9733; 4.9/5</span>
+        <span>|</span>
+        <span>+350 resenas</span>
+        <span>|</span>
+        <span>12+ anos</span>
       </div>
     </div>
     <div class="hero__scroll-indicator">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </div>
   </section>
 
@@ -98,6 +103,33 @@
       <div class="section-header">
         <h2 class="section-title">Nuestro Menu</h2>
         <p class="section-subtitle">De la parrilla a tu mesa</p>
+      </div>
+
+      <div class="menu__featured">
+        <div class="menu__featured-card">
+          <img src="assets/images/arrachera-parrilla.png" alt="Arrachera al Carbon" class="menu__featured-img">
+          <div class="menu__featured-info">
+            <span class="menu__badge menu__badge--fire">Mas Pedido</span>
+            <h3>Arrachera al Carbon</h3>
+            <p>$320</p>
+          </div>
+        </div>
+        <div class="menu__featured-card">
+          <img src="assets/images/tacos-closeup.png" alt="Tacos al Pastor" class="menu__featured-img">
+          <div class="menu__featured-info">
+            <span class="menu__badge menu__badge--star">Recomendado</span>
+            <h3>Tacos de Birria</h3>
+            <p>$200</p>
+          </div>
+        </div>
+        <div class="menu__featured-card">
+          <img src="assets/images/arrachera-tabla.png" alt="Corte Ranchero" class="menu__featured-img">
+          <div class="menu__featured-info">
+            <span class="menu__badge menu__badge--fire">Especialidad</span>
+            <h3>Corte Ranchero</h3>
+            <p>$420</p>
+          </div>
+        </div>
       </div>
 
       <div class="menu__tabs">
@@ -233,7 +265,7 @@
       </div>
 
       <div class="menu__cta">
-        <a href="#reservas" class="btn btn--primary">Reservar para Probar</a>
+        <a href="#reservas" class="btn btn--primary">Reserva para probarlo</a>
       </div>
     </div>
   </section>
@@ -246,57 +278,71 @@
         <p class="section-subtitle">Asegura tu lugar en El Ranchito</p>
       </div>
 
-      <form id="reservationForm" class="reservation__form" novalidate>
-        <div class="form__row">
-          <div class="form__group">
-            <label for="resName" class="form__label">Nombre</label>
-            <input type="text" id="resName" name="nombre" class="form__input" required placeholder="Tu nombre completo">
+      <div class="reservation__content">
+        <form id="reservationForm" class="reservation__form" novalidate>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="resName" class="form__label">Nombre</label>
+              <input type="text" id="resName" name="nombre" class="form__input" required placeholder="Tu nombre completo">
+            </div>
+            <div class="form__group">
+              <label for="resPhone" class="form__label">Telefono</label>
+              <input type="tel" id="resPhone" name="telefono" class="form__input" required placeholder="55 1234 5678">
+            </div>
           </div>
-          <div class="form__group">
-            <label for="resPhone" class="form__label">Telefono</label>
-            <input type="tel" id="resPhone" name="telefono" class="form__input" required placeholder="55 1234 5678">
-          </div>
-        </div>
 
-        <div class="form__row">
-          <div class="form__group">
-            <label for="resEmail" class="form__label">Email</label>
-            <input type="email" id="resEmail" name="email" class="form__input" placeholder="correo@ejemplo.com">
+          <div class="form__row">
+            <div class="form__group">
+              <label for="resEmail" class="form__label">Email</label>
+              <input type="email" id="resEmail" name="email" class="form__input" placeholder="correo@ejemplo.com">
+            </div>
+            <div class="form__group">
+              <label for="resGuests" class="form__label">Comensales</label>
+              <input type="number" id="resGuests" name="comensales" class="form__input" min="1" max="20" required placeholder="2">
+            </div>
           </div>
-          <div class="form__group">
-            <label for="resGuests" class="form__label">Comensales</label>
-            <input type="number" id="resGuests" name="comensales" class="form__input" min="1" max="20" required placeholder="2">
-          </div>
-        </div>
 
-        <div class="form__row">
-          <div class="form__group">
-            <label for="resDate" class="form__label">Fecha</label>
-            <input type="date" id="resDate" name="fecha" class="form__input" required>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="resDate" class="form__label">Fecha</label>
+              <input type="date" id="resDate" name="fecha" class="form__input" required>
+            </div>
+            <div class="form__group">
+              <label for="resTime" class="form__label">Hora</label>
+              <select id="resTime" name="hora" class="form__input" required>
+                <option value="" disabled selected>Selecciona una hora</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </div>
           </div>
-          <div class="form__group">
-            <label for="resTime" class="form__label">Hora</label>
-            <select id="resTime" name="hora" class="form__input" required>
-              <option value="" disabled selected>Selecciona una hora</option>
-              <option value="13:00">13:00</option>
-              <option value="14:00">14:00</option>
-              <option value="15:00">15:00</option>
-              <option value="19:00">19:00</option>
-              <option value="20:00">20:00</option>
-              <option value="21:00">21:00</option>
-              <option value="22:00">22:00</option>
-            </select>
+
+          <div class="form__group form__group--full">
+            <label for="resNotes" class="form__label">Notas especiales</label>
+            <textarea id="resNotes" name="notas" class="form__input form__textarea" rows="3" placeholder="Alergias, celebraciones, preferencias de mesa..."></textarea>
           </div>
-        </div>
 
-        <div class="form__group form__group--full">
-          <label for="resNotes" class="form__label">Notas especiales</label>
-          <textarea id="resNotes" name="notas" class="form__input form__textarea" rows="3" placeholder="Alergias, celebraciones, preferencias de mesa..."></textarea>
-        </div>
+          <button type="submit" class="btn btn--primary form__submit">Confirmar Reserva</button>
+          <div id="reservationStatus" class="reservation__status"></div>
+        </form>
 
-        <button type="submit" class="btn btn--primary form__submit">Confirmar Reserva</button>
-        <div id="reservationStatus" class="reservation__status"></div>
-      </form>
+        <div class="reservation__aside">
+          <img src="assets/images/celular-reserva.png" alt="" class="reservation__image">
+          <div class="reservation__trust">
+            <p>&#10003; Te confirmamos por WhatsApp en minutos</p>
+            <p>&#10003; Cancelacion gratuita hasta 2 horas antes</p>
+            <p>&#10003; Mesas para 1 a 20 personas</p>
+          </div>
+          <a href="https://wa.me/5215551234567?text=Hola%2C%20quiero%20reservar%20una%20mesa" class="btn btn--whatsapp" target="_blank" rel="noopener">
+            <span>Reservar por WhatsApp</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -306,6 +352,10 @@
       <div class="section-header">
         <h2 class="section-title">Eventos Especiales</h2>
         <p class="section-subtitle">Celebra tus momentos en El Ranchito</p>
+      </div>
+
+      <div class="events__hero">
+        <img src="assets/images/evento-elegante.png" alt="Eventos en El Ranchito" class="events__hero-img">
       </div>
 
       <div class="events__content">
@@ -373,8 +423,47 @@
             <span id="quoteTotal">$0</span>
           </div>
           <p class="events__disclaimer">*Precio estimado. Solicite cotizacion formal para precio definitivo.</p>
-          <a href="https://wa.me/5215551234567?text=Hola%2C%20quiero%20cotizar%20un%20evento" class="btn btn--primary" id="contacto-evento">Solicitar Cotizacion Formal</a>
+          <a href="https://wa.me/5215551234567?text=Hola%2C%20quiero%20cotizar%20un%20evento" class="btn btn--primary" id="contacto-evento">Enviar cotizacion por WhatsApp</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIOS ==================== -->
+  <section id="testimonios" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <p class="section-subtitle">Mas de 350 resenas con 4.9 estrellas</p>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <img src="assets/images/pareja-feliz.png" alt="" class="testimonial-card__photo">
+          <div class="testimonial-card__content">
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">"La mejor carne que he probado en la ciudad. El ambiente es increible, te transporta a un rancho autentico. Volveremos sin duda."</p>
+            <p class="testimonial-card__author">&mdash; Maria y Carlos G.</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <img src="assets/images/pareja-cenando.png" alt="" class="testimonial-card__photo">
+          <div class="testimonial-card__content">
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">"Celebramos nuestro aniversario aqui y fue perfecto. La arrachera espectacular, el servicio de primera. 100% recomendado para eventos."</p>
+            <p class="testimonial-card__author">&mdash; Roberto y Ana L.</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <img src="assets/images/terraza-luces.png" alt="" class="testimonial-card__photo">
+          <div class="testimonial-card__content">
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">"La terraza es magica por las noches. Pedimos los tacos de birria y las costillas BBQ — todo exquisito. El mejor restaurante de la zona."</p>
+            <p class="testimonial-card__author">&mdash; Familia Rodriguez</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="#reservas" class="btn btn--primary">Reserva y Vive la Experiencia</a>
       </div>
     </div>
   </section>
@@ -389,21 +478,28 @@
       <div class="about__content">
         <div class="about__text">
           <p>El Ranchito nacio como un sueno familiar: llevar los sabores autenticos del campo mexicano a la ciudad. Con mas de una decada de tradicion, nuestra cocina honra las recetas heredadas de generacion en generacion, preparadas con ingredientes frescos y el carino de siempre.</p>
-          <p>Nuestro espacio combina la calidez de un rancho con un ambiente rustico y acogedor, perfecto para reuniones familiares, cenas entre amigos o celebraciones especiales. Cada plato que sale de nuestra cocina lleva el sello de lo autentico, porque en El Ranchito la comida se hace con el alma.</p>
+          <p>Nuestro espacio combina la calidez de un rancho con un ambiente rustico y acogedor, perfecto para reuniones familiares, cenas entre amigos o celebraciones especiales.</p>
         </div>
-        <div class="about__stats">
-          <div class="about__stat">
-            <span class="about__stat-number">12+</span>
-            <span class="about__stat-label">Anos</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-number">50,000+</span>
-            <span class="about__stat-label">Platos Servidos</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-number">500+</span>
-            <span class="about__stat-label">Eventos Realizados</span>
-          </div>
+        <div class="about__gallery">
+          <img src="assets/images/chef-tacos.png" alt="Nuestro chef" class="about__photo">
+          <img src="assets/images/fachada-entrada.png" alt="Entrada El Ranchito" class="about__photo">
+          <img src="assets/images/parrilla-fuego.png" alt="Nuestra parrilla" class="about__photo">
+          <img src="assets/images/interior-rustico.png" alt="Ambiente rustico" class="about__photo">
+        </div>
+      </div>
+
+      <div class="about__stats">
+        <div class="about__stat">
+          <span class="about__stat-number">12+</span>
+          <span class="about__stat-label">Anos</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-number">50,000+</span>
+          <span class="about__stat-label">Platos Servidos</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-number">500+</span>
+          <span class="about__stat-label">Eventos Realizados</span>
         </div>
       </div>
 
