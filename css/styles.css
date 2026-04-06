@@ -510,6 +510,52 @@ section {
   margin-bottom: 1.5rem;
 }
 
+/* Menu item badges */
+.menu__item-badge {
+  display: inline-block;
+  font-family: var(--font-data);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+  background: rgba(107,127,94,0.15);
+  color: var(--color-sage);
+  vertical-align: middle;
+}
+
+.menu__item-badge--hot {
+  background: rgba(191,91,33,0.15);
+  color: var(--color-terracotta);
+}
+
+/* Events type perks */
+.events__type-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  text-align: left;
+}
+
+.events__type-perks li {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-gray-warm);
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.events__type-perks li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-sage);
+  font-weight: 700;
+}
+
 .menu__container {
   max-width: 700px;
   margin: 0 auto;
