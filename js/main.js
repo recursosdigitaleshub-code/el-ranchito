@@ -171,7 +171,7 @@
       if (reservationStatus) {
         reservationStatus.classList.add('reservation-status--success');
         reservationStatus.textContent =
-          '\u00a1Reserva confirmada! Te enviaremos un mensaje de confirmacion al telefono proporcionado.';
+          '\u00a1Reserva confirmada! Te enviaremos un mensaje de confirmación al teléfono proporcionado.';
       }
 
       // Reiniciar formulario despues de 3 segundos
@@ -201,11 +201,11 @@
    * price: precio base (por invitado o fijo)
    */
   const SERVICES = [
-    { id: 'svcBasic',   label: 'Paquete Basico',     perGuest: true,  price: 350 },
+    { id: 'svcBasic',   label: 'Paquete Básico',     perGuest: true,  price: 350 },
     { id: 'svcPremium', label: 'Paquete Premium',     perGuest: true,  price: 550 },
     { id: 'svcBar',     label: 'Barra de Bebidas',    perGuest: true,  price: 200 },
-    { id: 'svcDecor',   label: 'Decoracion',          perGuest: false, price: 5000 },
-    { id: 'svcMusic',   label: 'Musica en Vivo',      perGuest: false, price: 8000 },
+    { id: 'svcDecor',   label: 'Decoración',          perGuest: false, price: 5000 },
+    { id: 'svcMusic',   label: 'Música en Vivo',      perGuest: false, price: 8000 },
     { id: 'svcWaiters', label: 'Meseros Adicionales',  perGuest: false, price: 1500 },
   ];
 
